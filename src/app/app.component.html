@@ -1,0 +1,40 @@
+<ngx-hm-carousel style="margin: 20px"
+  [(ngModel)]="index"
+  [infinite]="true"
+  align="left"
+  [show-num]="showNum"
+  class="carousel c-accent">
+
+  <section ngx-hm-carousel-container class="content">
+    <article class="item cursor-pointer"
+      ngx-hm-carousel-item
+      *ngFor="let avatar of avatars; let i = index">
+      <div class="img"
+        [style.backgroundImage]="'url('+avatar.url+')'">
+      </div>
+    </article>
+  </section>
+
+  <ng-template #carouselDot let-model>
+    <div class="ball bg-accent" *ngIf="!notDrag"
+      [class.visible]="model.index === model.currentIndex"></div>
+  </ng-template>
+
+  <ng-template #carouselProgress let-progress>    
+    <div class="progress"></div>
+  </ng-template>
+
+    <ng-template #carouselPrev style="">
+    <div class="click-area">
+      <i class="material-icons">keyboard_arrow_left</i>
+    </div>
+  </ng-template>
+
+  <ng-template #carouselNext style="margin-top: 160px;">
+    <div class="click-area">
+      <i class="material-icons">keyboard_arrow_right</i>
+    </div>
+  </ng-template>
+
+</ngx-hm-carousel>
+

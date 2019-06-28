@@ -1,0 +1,35 @@
+$transition_time:.2s;
+
+.carousel {
+  .content {
+    display: flex;
+
+    .item {
+      width: 100%;
+      display: block;
+      .img {
+        width: 100%;
+        display: block;
+        background-size: cover;
+        background-position: center;
+        height: 0;
+        padding-bottom: 500px;
+      }
+    }
+
+
+  }
+
+  .ball {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ff5252;
+    border: 2px solid white;
+    opacity: 0.5;
+
+    &.visible {
+      opacity: 1;
+    }
+  }
+}

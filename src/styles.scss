@@ -1,0 +1,6 @@
+/* Add application styles & imports to this file! */
+$transition_time:.2s;
+
+.transition {
+  transition: all $transition_time ease-in-out;
+}
